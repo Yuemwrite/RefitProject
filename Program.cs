@@ -11,8 +11,8 @@ public class Program
     static async Task Main(string[] args)
     {
          ITodoAPI todoAPI = RestService.For<ITodoAPI>("http://jsonplaceholder.typicode.com");
-         List<Todo> todos = await todoAPI.GetTodos();
-         foreach (var todo in todos)
+         List<Todo> todoss = await todoAPI.GetTodos();
+         foreach (var todo in todoss)
          {
              Console.WriteLine(todo.title);  
          }
