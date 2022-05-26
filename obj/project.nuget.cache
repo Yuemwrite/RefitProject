@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "5mj9v4eTEPynuwbV3h+FIGV7fmRWJUKMGXA2wGuT8LkeLYiBKINfig5KQq2MrqOKkx6vdLpdmcxk2mPgRx4GYA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yunus.emre.haslak\\Desktop\\ThirdParyApp\\RefitProject\\RefitProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yunus.emre.haslak\\.nuget\\packages\\newtonsoft.json\\13.0.2-beta1\\newtonsoft.json.13.0.2-beta1.nupkg.sha512",
+    "C:\\Users\\yunus.emre.haslak\\.nuget\\packages\\refit\\6.3.2\\refit.6.3.2.nupkg.sha512",
+    "C:\\Users\\yunus.emre.haslak\\.nuget\\packages\\system.net.http.json\\6.0.0\\system.net.http.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\yunus.emre.haslak\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\yunus.emre.haslak\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\yunus.emre.haslak\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
