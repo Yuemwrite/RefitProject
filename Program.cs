@@ -10,75 +10,22 @@ public class Program
 {
     static async Task Main(string[] args)
     {
-         ITodoAPI todoAPI = RestService.For<ITodoAPI>("http://jsonplaceholder.typicode.com");
-         List<Todo> todoss = await todoAPI.GetTodos();
-         foreach (var todo in todoss)
+        
+         IPostAPI postApi = RestService.For<IPostAPI>("https://jsonplaceholder.typicode.com/");
+         List<Post> posts = await postApi.GetPost();
+
+         foreach (var post in posts)
          {
-             Console.WriteLine(todo.title);  
+             Console.WriteLine(post.id + $". Post bilgileri: ");
+             Console.WriteLine($"userId : {post.userId}" + Environment.NewLine +
+             $"id: {post.id}" + Environment.NewLine + $"title : {post.title}" + Environment.NewLine + $"body: {post.body}");
+             Console.WriteLine("-----");
          }
 
-         // Todo todo2 = await todoAPI.GetTodo(3);
-         // Console.WriteLine("Todo TITLE : " + todo2.title);
 
-        // ICategory category = RestService.For<ICategory>("https://localhost:7099/api");
-        //
-        //
-        // #region GET DATA
-        //
-        // var categories = await category.GetCategories();
-        //
-        //  foreach (var item in categories.data)
-        //  {
-        //      Console.WriteLine(item.categoryName);
-        //  }
-        
-
-        // #endregion
-        //
-        // CategoryResponse newCategory = new CategoryResponse()
-        // {
-        //     data = new CreateCategory()
-        //     {
-        //         categoryName = "SonData",
-        //         description = "SonDesc"
-        //     }
-        // };
-        //
-        // var createCategory = await category.CreateCategory(new CreateCategory
-        // {
-        //     categoryName = "ilk",
-        //     description = "ilk"
-        // });
-        //
-        // Console.WriteLine($" İşlem Sonucu :  {createCategory.categoryName} {createCategory.description}");
-        //
-        // int a = 5;
-
-
-
-
-
-        // var categoryData = await category.GetCategory(3);
-        // foreach (var item in categoryData.data)
-        // {
-        //     Console.WriteLine(item.description);
-        // }
-
-
-        //
-        // foreach (var item in categoryData.data)
-        // {
-        //     Console.WriteLine(item.description);
-        // }
-
-
-
-        // var currentCategory = await category.GetCategory(5);
-        //
-        // Console.WriteLine(currentCategory);
-
-
-
+         var currentPost = await postApi.GetPostById(2);
+         Console.WriteLine($"userId : {currentPost.userId}" + Environment.NewLine +
+                           $"id: {currentPost.id}" + Environment.NewLine + $"title : {currentPost.title}" + Environment.NewLine + $"body: {currentPost.body}");
     }
 }
 
