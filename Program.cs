@@ -14,7 +14,7 @@ public class Program
          List<Todo> todos = await todoAPI.GetTodos();
          foreach (var todo in todos)
          {
-             Console.WriteLine(todo.title);
+             Console.WriteLine(todo.title); 
          }
 
          // Todo todo2 = await todoAPI.GetTodo(3);
